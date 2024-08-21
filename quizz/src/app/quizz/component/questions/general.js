@@ -1,4 +1,4 @@
-export default questions = [
+export const questions = [
     {
         question: "Quelle est l'abréviation de \"HyperText Markup Language\" ?",
         answers: ["HTML", "CSS", "JS", "HTTP"],
