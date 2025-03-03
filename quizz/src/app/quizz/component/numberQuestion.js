@@ -1,16 +1,15 @@
-export default function NumberQuestion({ setNumberQuestions}) {
+export default function NumberQuestion({ setNumber, numberTotalQuestions,currentNumber }) {
 
     function addNumberQuestions() {
-        setNumberQuestions(prev => prev + 1);
+        setNumber(prev => prev + 1);
     }
 
     function removeNumberQuestions() {
-        setNumberQuestions(prev => prev - 1);
+        setNumber(prev => prev - 1);
     }
    
-    return <div>
-        <button onClick={addNumberQuestions}>Passer à la prochaine question </button>
-        <button onClick={removeNumberQuestions}>Revenir à la question précédente </button>
-
+    return <div>        
+        { currentNumber > 0 && <button onClick={removeNumberQuestions}>Revenir à la question précédente </button>}
+        { currentNumber < numberTotalQuestions && <button onClick={addNumberQuestions}>Passer à la prochaine question </button>}
     </div>
 }

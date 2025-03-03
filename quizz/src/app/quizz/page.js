@@ -36,7 +36,7 @@ export default function Start() {
             <ChoiceNumber setNumberQuestions={setNumberQuestions} onTrigger={setNewQuizz} /> :
             <ShowQuestion question={quizz[currentQuestion]}  />            
             }
-            <NumberQuestion setNumberQuestions={setCurrentQuestion} />          
+            <NumberQuestion setNumber={setCurrentQuestion} currentNumber={currentQuestion} numberTotalQuestions={quizz.length - 1}  />          
         </main>
     );
 }
